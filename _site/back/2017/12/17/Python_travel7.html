@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>파이썬을 여행하는 히치하이커를 위한 안내서 - 데이터 지속성 | Blackruby Code</title>
+	<meta name="description" content="데이터 지속성">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/blackruby-code/assets/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/blackruby-code/assets/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="/blackruby-code/back/2017/12/17/Python_travel7.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Blackruby Code" href="/blackruby-code/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+	
+
+	<!-- Main -->
+	<script src="/blackruby-code/assets/js/main.js"></script>
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="inner">
+		<div class="branding">
+			<h1 class="site-title">			
+			<!-- 
+			<a href="/blackruby-code/">
+				<img class="avatar" src="/blackruby-code/assets/img/blackruby_logo.png" alt=""/>
+			</a>
+			 -->
+				<a href="/blackruby-code/">Blackruby Code</a>				
+			</h1>
+		</div>
+		<nav class="site-nav">
+			<ul>
+				<li>
+					<a href="https://blackruby.studio/">About</a>
+				</li>
+				<li class="dev-tab">
+					<span>Dev</span>
+					<ul>
+						<li>
+							<a href="/blackruby-code/back.html">back</a>
+						</li>
+						<li>
+							<a href="/blackruby-code/front.html">front</a>							
+						</li>
+					</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<li>
+					<a class="page-link" href="/blackruby-code/tags.html">
+						Tags
+					</a>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+							            
+				<!-- Search bar -->
+				
+				<li class="search-bar">
+				<form action="/blackruby-code/search.html" method="get">
+					<input type="text" id="search-box" name="query" placeholder="Search" class="">
+					<button type="submit" class="">
+						<i class="fa fa-fw fa-search"></i>
+					</button>
+				</form>
+				</li>
+				
+			</ul>
+		</nav>
+	</div>	    
+</header>
+
+    <div class="content">
+      <div class="inner">
+          <article >
+  <header style="background-image: url('/blackruby-code/')">
+    <h1 class="title">파이썬을 여행하는 히치하이커를 위한 안내서 - 데이터 지속성</h1>
+    
+    <p class="meta">
+      December 17, 2017
+       - Yoonkh
+    </p>
+  </header>  
+  <section class="post-content"><h2 id="데이터-지속성">데이터 지속성</h2>
+
+<h3 id="구조화된-파일">구조화된 파일</h3>
+
+<h3 id="데이터베이스-라이브러리">데이터베이스 라이브러리</h3>
+
+<p>파이썬 데이터베이스 API는 파이선에서 데이터베이스에 접근하는 표준 인터페이스를 정의한다. PEP 249에 문서화되어 있으며, 보다 자세한 내용은 파이썬 DB-API에 대한 소개 자료에 나와 있다.</p>
+
+<h4 id="sqlite3">sqlite3</h4>
+
+<p>SQLite는 sqlite3 뒤에서 데이터베이스를 제공하는 C 라이브러리이다. 단일 파일로 데이터베이스를 저장하며 컨벤션에 따라 *.db의 확장자를 가진다.</p>
+
+<h4 id="sqlalchemy">SQLAlchemy</h4>
+
+<p>SQLAlchemy는 매우 인기 있는 데이터베이스 툴킷이다. Django는 자체 ORM에서 SQLAlchemy로 전환하는 옵션을 제공하며, 블로그 제작을 위한 Flask 메가 튜토리얼에서는 SQLAlchemy를 백엔드로 사용한다.</p>
+
+<h4 id="djagno-orm">Djagno ORM</h4>
+
+<p>Django ORM은 데이터베이스 접근을 위해 Django에서 사용하는 인터페이스이다. Django ORM의 액티브 레코드 패턴의 구현이 아마도 여기 소개되는 라이브러리 중 루비 온레일스의 ActiveRecord 라이브러리와 가장 흡사할 것이다.</p>
+
+<h4 id="peewee">peewee</h4>
+
+<p>peewee는 SQL 문법을 알고 있는 상황에서 데이터베이스와 가볍게 상호작용하고 싶을 때 사용하면 좋다. 보는 그대로가 결과 그대로(What you see is what you get)즉 SQLAlchemy와 같이 테이블 구조를 추상화하는 최상위 레이어를 수동으로 작성할 필요가 없으며, Django ORM과 같이 라이브러리가 마법처럼 테이블 아래에 바탕 레이어를 만드는 일도 없다.</p>
+
+<h4 id="ponyorm">PonyORM</h4>
+
+<p>PonyORM은 쿼리 문법에 대해 다른 접근 방식을 취한다. SQL과 매우 유사한 언어나 불린 표현을 작성하는 대신, 파이썬의 제너레이터 구문을 사용한다. 맞춤형 PonyORM 엔티티를 생성할 수 있도록 돕는 그래픽 스키마 편집기도 있다.</p>
+
+<h4 id="sqlobject">SQLObject</h4>
+
+<p>2002년 10월에 공개된 SQLObject는 소개되는 ORM중 가장 오래되었다. 액티브 레코드 패턴을 구현하였으며, 구현했을 뿐아니라, SQLObject에는 SQL 로직을 파이썬에 추상화하는 방법으로 표준 연산자(==, &lt;, &lt;== 등)를 오버로드하는 새로운 아이디어도 적용되었다. 이 아이디어는 거의 모든 ORM 라이브러리에 구현되어 있으며, 매우 인기 있다.</p>
+
+<h4 id="records">Records</h4>
+
+<p>Records는 다양한 데이터베이스에 원시(raw) SQL 쿼리를 보낼 수 있도록 설계된 최소한의 SQL 라이브러리이다. Tublib과 SQLAlchemy와 함께 설치되며, 근사한 API와 명령줄 도구가 제공되어 SQL 클라이언트와 같이 행동하며, YAML, XLS, 기타 Tablib 형식으로 결과를 출력할 수 있다.</p>
+
+<h4 id="nosql-데이터베이스-라이브러리">NoSQL 데이터베이스 라이브러리</h4>
+
+<p>전통적인 관계형 데이터베이스가 아닌 데이터베이스, 즉 NoSQL데이터베이스를 사용하는 사람들도 있다. PyPI를 둘러보면, 비슷한 이름을 가진 파이썬 패키지가 수없이 많아 혼란스러울 수 있다. 원하는 데이터베이스 제품과 함께 사용하기 좋은 파이썬 라이브러리가 무엇인지 살펴보자.</p>
+
+<ul>
+  <li>
+    <p>MongoDB</p>
+
+    <ul>
+      <li>몽고DB(MongoDB)는 분산 문서 저장소이다. 고유의 필터와 쿼리 언어가 있는, 클러스터에 서식하는 거대한 파이썬 딕셔너리를 상상하면 된다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>카산드라</p>
+
+    <ul>
+      <li>카산드라는 분산 테이블 저장소이다. 빠른 검색을 제공하며 열의 개수가 많아져도 무리가 없다. 조인 기능을 제공하지 않는 대신 여러 테이블의 서로 다른 열을 하나의 테이블로 묶는 기능을 제공한다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>HBase</p>
+
+    <ul>
+      <li>HBase는 분산 열 저장소이다. 이경우 열 저장소는 데이터가 (행 ID, 열 이름, 값)과 같이 저장되므로 웹을 구성하는 웹사이트간 네트워크 데이터와 같은 희소 배열 (sparse array) 형태의 데이터에 적합하다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>드루이드</p>
+
+    <ul>
+      <li>드루이드는 분산 열저장소로서, 이벤트 데이터를 수집하는 데 사용할 수 있다. 드루이드는 열에 순서를 매기고 정렬할 수 있으며, 빠른 I/O를 가능하게 하고 작은 풋프린트를 가지도록 스토리지(storage)를 압축할 수 있다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>레디스</p>
+
+    <ul>
+      <li>레디스는 분산 인메모리 키-값 저장소이다. 디스크 I/O가 없어 대기 시간이 줄어드는 게 핵심이다. 예를 들어 더 빠른 웹 조회를 위해 빈번한 쿼리 결과를 저장할 수도 있다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>카우치베이스</p>
+
+    <ul>
+      <li>Couchbase는 보다 SQL스러운 API를 가지는 또 다른 분산 문서 저장소이다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Neo4j</p>
+
+    <ul>
+      <li>Neo4j는 그래프 형태의 관계로 객체를 저장하기 위한 그래프 데이터베이스이다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>LMDB</p>
+
+    <ul>
+      <li>LMDB는 메모리에 매핑된 파일을 포함하는 키-값 저장소 데이터베이스이다. 즉, 파일이 처음부터 읽혀서 데이터가 있는 부분에 도달할 필요가 없으므로 인메모리 저장소와 거의 같은 성능이 나온다.</li>
+    </ul>
+  </li>
+</ul>
+</section>
+  
+<footer>
+  <div class="tags">
+    
+    <a class="tag" href="/blackruby-code/tags#Python">#Python</a>
+    
+    <a class="tag" href="/blackruby-code/tags#Flask">#Flask</a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+
+      </div>     
+    </div>
+    
+<script src="/blackruby-code/assets/js/katex_init.js"></script>
+
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

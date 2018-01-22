@@ -1,0 +1,144 @@
+.site-header {
+  position: relative;
+  @extend %padding-small;
+  padding: 0 6% 0 6%;
+  background: $brand-color;
+  border-top: 2px solid #ff8c00;
+  border-bottom: 1px solid $border-color;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  z-index: 200;
+  a {
+    color: $header-link-color;
+  }
+
+  .avatar {
+    height: 2em;
+    width: 2em;
+    float: left;
+    margin-top: -3px;
+    border-radius: 0.2em;
+    margin-right: 1em;
+  }
+
+  .site-title {
+    float: left;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 80px;
+  }
+
+  .site-nav {
+    display: inline-block;
+    float: right;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 1.5;
+      float: right;
+      text-align: right;      
+      li {
+        position: relative;
+        display: inline;
+        float: left;
+        margin-right: 0.4em;
+        width: 60px;
+        text-align: center;
+        line-height: 76px;
+        box-sizing: border-box;
+        &:hover {
+          border-bottom: 2px solid #999;
+        }
+        &.search-bar {
+          padding-top: 23px;
+          width: 150px;
+          text-align: unset;
+          &:hover {
+            border-bottom: none;
+          }
+        }
+        form {
+          line-height: 1.5;
+          
+        }
+        ul {
+          background-color: #fff;
+          display: none;
+          position: absolute;
+          bottom: -90px;
+          left: 0;
+          li {
+            line-height: 1;
+            padding: 12px 0;
+            &:hover {
+              border-bottom:0;
+            }
+          }
+        }
+        &.dev-tab {
+          &:hover {
+            ul {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 1100px) {
+      ul {
+        display: inline-block;
+        float: left;
+        padding-top: $padding-small;
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+
+    /* --- Search form --- */
+    .search-bar {
+      margin-left: 30px;
+    }
+    form {
+        border: 0;
+        // border-bottom: 2px solid $search-color;
+        outline: 0;
+        position: relative;
+        *:focus {
+            outline: none;
+        }
+
+        input{
+            &[type=text] {
+                box-sizing: border-box;
+                border: 0;
+                outline: 0;
+                color: $search-color;
+            }
+
+            &::-moz-placeholder {
+                color: $search-color;
+                opacity: 1;
+            }
+
+            &:-ms-input-placeholder, &::-webkit-input-placeholder {
+                color: $search-color;
+            }
+        }
+
+        button {
+           border: none;
+           font-size: 0.9em;
+           background-color: $brand-color;
+           color: $search-color;
+           position: absolute;
+           top:0;
+           right: 0;      
+        }
+    }
+}
