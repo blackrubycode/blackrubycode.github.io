@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>문제풀이 - 코딩도장 | Blackruby Code</title>
+	<meta name="description" content="1차원의 점들이 주어졌을 때, 그 중 가장 거리가 짧은 것의 쌍을 출력하는 함수를 작성하시오. (단 점들의 배열은 모두 정렬되어있다고 가정한다.)">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/blackruby-code/assets/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/blackruby-code/assets/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="/blackruby-code/code/2017/12/20/Code.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Blackruby Code" href="/blackruby-code/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+	
+
+	<!-- Main -->
+	<script src="/blackruby-code/assets/js/main.js"></script>
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="inner">
+		<div class="branding">
+			<h1 class="site-title">			
+			<!-- 
+			<a href="/blackruby-code/">
+				<img class="avatar" src="/blackruby-code/assets/img/blackruby_logo.png" alt=""/>
+			</a>
+			 -->
+				<a href="/blackruby-code/">Blackruby Code</a>				
+			</h1>
+		</div>
+		<nav class="site-nav">
+			<ul>
+				<li>
+					<a href="https://blackruby.studio/">About</a>
+				</li>
+				<li class="dev-tab">
+					<span>Dev</span>
+					<ul>
+						<li>
+							<a href="/blackruby-code/back.html">back</a>
+						</li>
+						<li>
+							<a href="/blackruby-code/front.html">front</a>							
+						</li>
+					</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<li>
+					<a class="page-link" href="/blackruby-code/tags.html">
+						Tags
+					</a>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+							            
+				<!-- Search bar -->
+				
+				<li class="search-bar">
+				<form action="/blackruby-code/search.html" method="get">
+					<input type="text" id="search-box" name="query" placeholder="Search" class="">
+					<button type="submit" class="">
+						<i class="fa fa-fw fa-search"></i>
+					</button>
+				</form>
+				</li>
+				
+			</ul>
+		</nav>
+	</div>	    
+</header>
+
+    <div class="content">
+      <!-- <div class="inner"> -->
+          <article >
+  <header style="background-image: url('/blackruby-code/')">
+    <h1 class="title">문제풀이 - 코딩도장</h1>
+    
+    <p class="meta">
+      December 20, 2017
+       - Yoonkh
+    </p>
+  </header>  
+  <section class="post-content"><p>1차원의 점들이 주어졌을 때, 그 중 가장 거리가 짧은 것의 쌍을 출력하는 함수를 작성하시오. (단 점들의 배열은 모두 정렬되어있다고 가정한다.)</p>
+
+<p>예를들어 S={1, 3, 4, 8, 13, 17, 20} 이 주어졌다면, 결과값은 (3, 4)가 될 것이다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s = [1,23,11,24,32]
+
+distance = 10000
+result = [0, 0]
+
+for i in range(len(s)):
+   if i == 0:
+      continue
+   else:
+      tmp_distance = abs(s[i] - s[i - 1])
+      if tmp_distance &lt; distance:
+         distance = tmp_distance
+         result[0] = i - 1
+         result[1] = i
+
+print(s[result[0]], s[result[1]])
+</code></pre></div></div>
+</section>
+  
+<footer>
+  <div class="tags">
+    
+    <a class="tag" href="/blackruby-code/tags#Algorithm">#Algorithm</a>
+    
+    <a class="tag" href="/blackruby-code/tags#Code">#Code</a>
+    
+    <a class="tag" href="/blackruby-code/tags#Python">#Python</a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+
+      <!-- </div>      -->
+    </div>
+    
+<script src="/blackruby-code/assets/js/katex_init.js"></script>
+
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

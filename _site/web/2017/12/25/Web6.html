@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>웹 엔지니어 - 데이터 시각화 | Blackruby Code</title>
+	<meta name="description" content="데이터 시각화">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/blackruby-code/assets/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/blackruby-code/assets/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="/blackruby-code/web/2017/12/25/Web6.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Blackruby Code" href="/blackruby-code/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+	
+
+	<!-- Main -->
+	<script src="/blackruby-code/assets/js/main.js"></script>
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="inner">
+		<div class="branding">
+			<h1 class="site-title">			
+			<!-- 
+			<a href="/blackruby-code/">
+				<img class="avatar" src="/blackruby-code/assets/img/blackruby_logo.png" alt=""/>
+			</a>
+			 -->
+				<a href="/blackruby-code/">Blackruby Code</a>				
+			</h1>
+		</div>
+		<nav class="site-nav">
+			<ul>
+				<li>
+					<a href="https://blackruby.studio/">About</a>
+				</li>
+				<li class="dev-tab">
+					<span>Dev</span>
+					<ul>
+						<li>
+							<a href="/blackruby-code/back.html">back</a>
+						</li>
+						<li>
+							<a href="/blackruby-code/front.html">front</a>							
+						</li>
+					</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<li>
+					<a class="page-link" href="/blackruby-code/tags.html">
+						Tags
+					</a>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+							            
+				<!-- Search bar -->
+				
+				<li class="search-bar">
+				<form action="/blackruby-code/search.html" method="get">
+					<input type="text" id="search-box" name="query" placeholder="Search" class="">
+					<button type="submit" class="">
+						<i class="fa fa-fw fa-search"></i>
+					</button>
+				</form>
+				</li>
+				
+			</ul>
+		</nav>
+	</div>	    
+</header>
+
+    <div class="content">
+      <!-- <div class="inner"> -->
+          <article >
+  <header style="background-image: url('/blackruby-code/')">
+    <h1 class="title">웹 엔지니어 - 데이터 시각화</h1>
+    
+    <p class="meta">
+      December 25, 2017
+       - Yoonkh
+    </p>
+  </header>  
+  <section class="post-content"><h2 id="데이터-시각화">데이터 시각화</h2>
+
+<h3 id="왜-구글-차트인가">왜 구글 차트인가</h3>
+
+<p>구글 차트는 구글에서 제공하는 HTML5, SVG 기능을 이용한 그래프 라이브러리입니다. 구글 차트를 JavaScript에 삽입하면 쉽게 그래프를 그릴 수 있습니다.</p>
+
+<h3 id="막대-그래프">막대 그래프</h3>
+
+<h4 id="유스케이스">유스케이스</h4>
+
+<p>막대 그래프를 사용하는 유스케이스 예는 다음과 같습니다.</p>
+
+<ul>
+  <li>작년 같은 달의 액세스 총수를 비교하고 싶다.</li>
+  <li>이번 달 시간별 상품 매출 비교를 지난달과 비교하고 싶다.</li>
+</ul>
+
+<h4 id="예제-표시">예제 표시</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://www.gstatic.com/charts/loader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">'current'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'packages'</span><span class="p">:[</span><span class="s1">'bar'</span><span class="p">]});</span>
+      <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">setOnLoadCallback</span><span class="p">(</span><span class="nx">drawChart</span><span class="p">);</span>
+
+      <span class="kd">function</span> <span class="nx">drawChart</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">google</span><span class="p">.</span><span class="nx">visualization</span><span class="p">.</span><span class="nx">arrayToDataTable</span><span class="p">([</span>
+          <span class="p">[</span><span class="s1">'Year'</span><span class="p">,</span> <span class="s1">'Sales'</span><span class="p">,</span> <span class="s1">'Expenses'</span><span class="p">,</span> <span class="s1">'Profit'</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'2014'</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'2015'</span><span class="p">,</span> <span class="mi">1170</span><span class="p">,</span> <span class="mi">460</span><span class="p">,</span> <span class="mi">250</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'2016'</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">1120</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'2017'</span><span class="p">,</span> <span class="mi">1030</span><span class="p">,</span> <span class="mi">540</span><span class="p">,</span> <span class="mi">350</span><span class="p">]</span>
+        <span class="p">]);</span>
+
+        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="na">chart</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">title</span><span class="p">:</span> <span class="s1">'Company Performance'</span><span class="p">,</span>
+            <span class="na">subtitle</span><span class="p">:</span> <span class="s1">'Sales, Expenses, and Profit: 2014-2017'</span><span class="p">,</span>
+          <span class="p">},</span>
+          <span class="na">bars</span><span class="p">:</span> <span class="s1">'horizontal'</span> <span class="c1">// Required for Material Bar Charts.</span>
+        <span class="p">};</span>
+
+        <span class="kd">var</span> <span class="nx">chart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">Bar</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'barchart_material'</span><span class="p">));</span>
+
+        <span class="nx">chart</span><span class="p">.</span><span class="nx">draw</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">Bar</span><span class="p">.</span><span class="nx">convertOptions</span><span class="p">(</span><span class="nx">options</span><span class="p">));</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"barchart_material"</span> <span class="na">style=</span><span class="s">"width: 900px; height: 500px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h5 id="jsapi를-읽어-온다">jsapi를 읽어 온다</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<h5 id="사용하고-싶은-api를-호출한다">사용하고 싶은 API를 호출한다</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>google.charts.load('current', {'packages':['bar']});
+</code></pre></div></div>
+
+<h5 id="페이지-그릴-때-값을-설정한다">페이지 그릴 때 값을 설정한다</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses', 'Profit'],
+          ['2014', 1000, 400, 200],
+          ['2015', 1170, 460, 250],
+          ['2016', 660, 1120, 300],
+          ['2017', 1030, 540, 350]
+        ]
+</code></pre></div></div>
+
+<h5 id="임의의-id-요소에-그린다">임의의 ID 요소에 그린다</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+chart.draw(data, google.charts.Bar.convertOptions(options));
+</code></pre></div></div>
+
+<h3 id="누적-막대-그래프">누적 막대 그래프</h3>
+
+<h4 id="유스케이스-1">유스케이스</h4>
+
+<p>누적 막대 그래프를 사용하는 유스케이스 예는 다음과 같습니다.</p>
+
+<ul>
+  <li>월별 액세스 총수 중 PC, iPhone, Android 비교</li>
+  <li>월별 사용자의 남녀 비교</li>
+</ul>
+
+<p>누적 막대 그래프는 시계열로 비교하고 싶을 때 주로 사용합니다.</p>
+
+<h4 id="예제-표시-1">예제 표시</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://www.gstatic.com/charts/loader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">'current'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'packages'</span><span class="p">:[</span><span class="s1">'bar'</span><span class="p">]});</span>
+      <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">setOnLoadCallback</span><span class="p">(</span><span class="nx">drawChart</span><span class="p">);</span>
+
+      <span class="kd">function</span> <span class="nx">drawChart</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">google</span><span class="p">.</span><span class="nx">visualization</span><span class="p">.</span><span class="nx">arrayToDataTable</span><span class="p">([</span>
+	        <span class="p">[</span><span class="s1">'Genre'</span><span class="p">,</span> <span class="s1">'Fantasy &amp; Sci Fi'</span><span class="p">,</span> <span class="s1">'Romance'</span><span class="p">,</span> <span class="s1">'Mystery/Crime'</span><span class="p">,</span> <span class="s1">'General'</span><span class="p">,</span>
+	         <span class="s1">'Western'</span><span class="p">,</span> <span class="s1">'Literature'</span><span class="p">,</span> <span class="p">{</span> <span class="na">role</span><span class="p">:</span> <span class="s1">'annotation'</span> <span class="p">}</span> <span class="p">],</span>
+	        <span class="p">[</span><span class="s1">'2010'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">''</span><span class="p">],</span>
+	        <span class="p">[</span><span class="s1">'2020'</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">''</span><span class="p">],</span>
+	        <span class="p">[</span><span class="s1">'2030'</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="s1">''</span><span class="p">]</span>
+      <span class="p">]);</span>
+
+     	 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+	        <span class="na">width</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
+	        <span class="na">height</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+	        <span class="na">legend</span><span class="p">:</span> <span class="p">{</span> <span class="na">position</span><span class="p">:</span> <span class="s1">'top'</span><span class="p">,</span> <span class="na">maxLines</span><span class="p">:</span> <span class="mi">3</span> <span class="p">},</span>
+	        <span class="na">bar</span><span class="p">:</span> <span class="p">{</span> <span class="na">groupWidth</span><span class="p">:</span> <span class="s1">'75%'</span> <span class="p">},</span>
+	        <span class="na">isStacked</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="p">};</span>
+
+        <span class="kd">var</span> <span class="nx">chart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">Bar</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'columnchart_material'</span><span class="p">));</span>
+
+        <span class="nx">chart</span><span class="p">.</span><span class="nx">draw</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">Bar</span><span class="p">.</span><span class="nx">convertOptions</span><span class="p">(</span><span class="nx">options</span><span class="p">));</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"columnchart_material"</span> <span class="na">style=</span><span class="s">"width: 800px; height: 500px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="꺾은선-그래프">꺾은선 그래프</h3>
+
+<h4 id="유스케이스-2">유스케이스</h4>
+
+<p>꺾은선 그래프를 사용하는 유스케이스 예는 다음과 같습니다.</p>
+
+<ul>
+  <li>전월과 비교했을 때 당월 계정 증가율</li>
+  <li>전월과 비교했을 때 당월 매출 증가율</li>
+</ul>
+
+<h4 id="예제-표시-2">예제 표시</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://www.gstatic.com/charts/loader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">'current'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'packages'</span><span class="p">:[</span><span class="s1">'corechart'</span><span class="p">]});</span>
+      <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">setOnLoadCallback</span><span class="p">(</span><span class="nx">drawChart</span><span class="p">);</span>
+
+      <span class="kd">function</span> <span class="nx">drawChart</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">google</span><span class="p">.</span><span class="nx">visualization</span><span class="p">.</span><span class="nx">arrayToDataTable</span><span class="p">([</span>
+          <span class="p">[</span><span class="s1">'Year'</span><span class="p">,</span> <span class="s1">'Sales'</span><span class="p">,</span> <span class="s1">'Expenses'</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'2004'</span><span class="p">,</span>  <span class="mi">1000</span><span class="p">,</span>      <span class="mi">400</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'2005'</span><span class="p">,</span>  <span class="mi">1170</span><span class="p">,</span>      <span class="mi">460</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'2006'</span><span class="p">,</span>  <span class="mi">660</span><span class="p">,</span>       <span class="mi">1120</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'2007'</span><span class="p">,</span>  <span class="mi">1030</span><span class="p">,</span>      <span class="mi">540</span><span class="p">]</span>
+        <span class="p">]);</span>
+
+        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="na">title</span><span class="p">:</span> <span class="s1">'Company Performance'</span><span class="p">,</span>
+          <span class="na">curveType</span><span class="p">:</span> <span class="s1">'function'</span><span class="p">,</span>
+          <span class="na">legend</span><span class="p">:</span> <span class="p">{</span> <span class="na">position</span><span class="p">:</span> <span class="s1">'bottom'</span> <span class="p">}</span>
+        <span class="p">};</span>
+
+        <span class="kd">var</span> <span class="nx">chart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">visualization</span><span class="p">.</span><span class="nx">LineChart</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'curve_chart'</span><span class="p">));</span>
+
+        <span class="nx">chart</span><span class="p">.</span><span class="nx">draw</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"curve_chart"</span> <span class="na">style=</span><span class="s">"width: 900px; height: 500px"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="산포도">산포도</h3>
+
+<h4 id="유스케이스-3">유스케이스</h4>
+
+<p>산포도를 사용하는 유스케이스 예는 다음과 같습니다.</p>
+
+<ul>
+  <li>계정별 매출과 매매 횟수의 상관</li>
+  <li>계정별 로그인 횟수와 매출 금액의 상관</li>
+</ul>
+
+<h4 id="예제-표시-3">예제 표시</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://www.gstatic.com/charts/loader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">'current'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'packages'</span><span class="p">:[</span><span class="s1">'corechart'</span><span class="p">]});</span>
+      <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">setOnLoadCallback</span><span class="p">(</span><span class="nx">drawChart</span><span class="p">);</span>
+
+      <span class="kd">function</span> <span class="nx">drawChart</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">google</span><span class="p">.</span><span class="nx">visualization</span><span class="p">.</span><span class="nx">arrayToDataTable</span><span class="p">([</span>
+          <span class="p">[</span><span class="s1">'Age'</span><span class="p">,</span> <span class="s1">'Weight'</span><span class="p">],</span>
+          <span class="p">[</span> <span class="mi">8</span><span class="p">,</span>      <span class="mi">12</span><span class="p">],</span>
+          <span class="p">[</span> <span class="mi">4</span><span class="p">,</span>      <span class="mf">5.5</span><span class="p">],</span>
+          <span class="p">[</span> <span class="mi">11</span><span class="p">,</span>     <span class="mi">14</span><span class="p">],</span>
+          <span class="p">[</span> <span class="mi">4</span><span class="p">,</span>      <span class="mi">5</span><span class="p">],</span>
+          <span class="p">[</span> <span class="mi">3</span><span class="p">,</span>      <span class="mf">3.5</span><span class="p">],</span>
+          <span class="p">[</span> <span class="mf">6.5</span><span class="p">,</span>    <span class="mi">7</span><span class="p">]</span>
+        <span class="p">]);</span>
+
+        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="na">title</span><span class="p">:</span> <span class="s1">'Age vs. Weight comparison'</span><span class="p">,</span>
+          <span class="na">hAxis</span><span class="p">:</span> <span class="p">{</span><span class="na">title</span><span class="p">:</span> <span class="s1">'Age'</span><span class="p">,</span> <span class="na">minValue</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">maxValue</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span>
+          <span class="na">vAxis</span><span class="p">:</span> <span class="p">{</span><span class="na">title</span><span class="p">:</span> <span class="s1">'Weight'</span><span class="p">,</span> <span class="na">minValue</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">maxValue</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span>
+          <span class="na">legend</span><span class="p">:</span> <span class="s1">'none'</span>
+        <span class="p">};</span>
+
+        <span class="kd">var</span> <span class="nx">chart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">visualization</span><span class="p">.</span><span class="nx">ScatterChart</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'chart_div'</span><span class="p">));</span>
+
+        <span class="nx">chart</span><span class="p">.</span><span class="nx">draw</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"chart_div"</span> <span class="na">style=</span><span class="s">"width: 900px; height: 500px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="외부-json-파일과-url-읽기">외부 JSON 파일과 URL 읽기</h3>
+
+<h4 id="json-데이터-작성">JSON 데이터 작성</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "cols": [
+        {"id":"","label":"Topping","pattern":"","type":"string"},
+        {"id":"","label":"Slices","pattern":"","type":"number"}
+      ],
+  "rows": [
+        {"c":[{"v":"Mushrooms","f":null},{"v":3,"f":null}]},
+        {"c":[{"v":"Onions","f":null},{"v":1,"f":null}]},
+        {"c":[{"v":"Olives","f":null},{"v":1,"f":null}]},
+        {"c":[{"v":"Zucchini","f":null},{"v":1,"f":null}]},
+        {"c":[{"v":"Pepperoni","f":null},{"v":2,"f":null}]}
+      ]
+}
+</code></pre></div></div>
+
+<h4 id="json-데이터-구조-확인">JSON 데이터 구조 확인</h4>
+
+<p>JSON 데이터의 구조는 다음과 같습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>배열 이름</strong></th>
+      <th><strong>설명</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>cols</td>
+      <td>열(데이터 이름 등을 지정)</td>
+    </tr>
+    <tr>
+      <td>rows</td>
+      <td>행(이름과 관련된 값을 저장)</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>셀</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="json-파일로-html-파일-만들기">JSON 파일로 HTML 파일 만들기</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!--Load the AJAX API--&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://www.gstatic.com/charts/loader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    
+    <span class="c1">// Load the Visualization API and the piechart package.</span>
+    <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">'current'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'packages'</span><span class="p">:[</span><span class="s1">'corechart'</span><span class="p">]});</span>
+      
+    <span class="c1">// Set a callback to run when the Google Visualization API is loaded.</span>
+    <span class="nx">google</span><span class="p">.</span><span class="nx">charts</span><span class="p">.</span><span class="nx">setOnLoadCallback</span><span class="p">(</span><span class="nx">drawChart</span><span class="p">);</span>
+      
+    <span class="kd">function</span> <span class="nx">drawChart</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">jsonData</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+          <span class="na">url</span><span class="p">:</span> <span class="s2">"./colmn-example.json"</span><span class="p">,</span> <span class="err">#</span> <span class="o">&lt;!--</span> <span class="err">여기서</span> <span class="err">앞에서</span> <span class="err">만든</span> <span class="nx">JSON</span> <span class="err">파일을</span> <span class="err">저장</span> <span class="o">--&gt;</span>
+          <span class="na">dataType</span><span class="p">:</span> <span class="s2">"json"</span><span class="p">,</span>
+          <span class="na">async</span><span class="p">:</span> <span class="kc">false</span>
+          <span class="p">}).</span><span class="nx">responseText</span><span class="p">;</span>
+          
+      <span class="c1">// Create our data table out of JSON data loaded from server.</span>
+      <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">visualization</span><span class="p">.</span><span class="nx">DataTable</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">);</span>
+
+      <span class="c1">// Instantiate and draw our chart, passing in some options.</span>
+      <span class="kd">var</span> <span class="nx">chart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">visualization</span><span class="p">.</span><span class="nx">PieChart</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'chart_div'</span><span class="p">));</span>
+      <span class="nx">chart</span><span class="p">.</span><span class="nx">draw</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="p">{</span><span class="na">width</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="na">height</span><span class="p">:</span> <span class="mi">240</span><span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!--Div that will hold the pie chart--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"chart_div"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>jQuery라는 JavaScript 라이브러리를 사용합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;
+&lt;/script&gt;
+</code></pre></div></div>
+</section>
+  
+<footer>
+  <div class="tags">
+    
+    <a class="tag" href="/blackruby-code/tags#Web">#Web</a>
+    
+    <a class="tag" href="/blackruby-code/tags#JSON">#JSON</a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+
+      <!-- </div>      -->
+    </div>
+    
+<script src="/blackruby-code/assets/js/katex_init.js"></script>
+
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

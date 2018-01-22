@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>웹 엔지니어 - 로그 | Blackruby Code</title>
+	<meta name="description" content="로그">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/blackruby-code/assets/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/blackruby-code/assets/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="/blackruby-code/web/2017/12/24/Web5.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Blackruby Code" href="/blackruby-code/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+	
+
+	<!-- Main -->
+	<script src="/blackruby-code/assets/js/main.js"></script>
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="inner">
+		<div class="branding">
+			<h1 class="site-title">			
+			<!-- 
+			<a href="/blackruby-code/">
+				<img class="avatar" src="/blackruby-code/assets/img/blackruby_logo.png" alt=""/>
+			</a>
+			 -->
+				<a href="/blackruby-code/">Blackruby Code</a>				
+			</h1>
+		</div>
+		<nav class="site-nav">
+			<ul>
+				<li>
+					<a href="https://blackruby.studio/">About</a>
+				</li>
+				<li class="dev-tab">
+					<span>Dev</span>
+					<ul>
+						<li>
+							<a href="/blackruby-code/back.html">back</a>
+						</li>
+						<li>
+							<a href="/blackruby-code/front.html">front</a>							
+						</li>
+					</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<li>
+					<a class="page-link" href="/blackruby-code/tags.html">
+						Tags
+					</a>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+							            
+				<!-- Search bar -->
+				
+				<li class="search-bar">
+				<form action="/blackruby-code/search.html" method="get">
+					<input type="text" id="search-box" name="query" placeholder="Search" class="">
+					<button type="submit" class="">
+						<i class="fa fa-fw fa-search"></i>
+					</button>
+				</form>
+				</li>
+				
+			</ul>
+		</nav>
+	</div>	    
+</header>
+
+    <div class="content">
+      <!-- <div class="inner"> -->
+          <article >
+  <header style="background-image: url('/blackruby-code/')">
+    <h1 class="title">웹 엔지니어 - 로그</h1>
+    
+    <p class="meta">
+      December 24, 2017
+       - Yoonkh
+    </p>
+  </header>  
+  <section class="post-content"><h2 id="로그">로그</h2>
+
+<h3 id="로그는-왜-중요한가">로그는 왜 중요한가</h3>
+
+<p>로그가 필요한 네가지 경우</p>
+
+<ul>
+  <li>
+    <p>버그 조사</p>
+  </li>
+  <li>
+    <p>이상 징후 감지</p>
+  </li>
+  <li>
+    <p>가설 검증</p>
+  </li>
+  <li>
+    <p>감사 로그</p>
+  </li>
+</ul>
+
+<h4 id="버그-조사">버그 조사</h4>
+
+<p>원인을 조사하는 정보로 가장 효과적인 것이 시스템 로그와 액세스 로그 같은 이른바 각종 ‘로그’입니다. ‘어느 URL에 보내는 요청에서 오류가 발생했는지’, ‘파라미터는 적절하게 전달되었는지’ 알 수 있으면, 문제 해결이 쉬워 집니다.</p>
+
+<h4 id="이상-징후-감지">이상 징후 감지</h4>
+
+<p>예를 들어, 매일 CPU와 메모리, 디스크 사용량 등 데이터를 기록해서 그래프로 시각화한다면, 그래프가 갑자기 변동하거나 한계치에 가깝더라도 문제가 되기 전에 파악할 수 있습니다. 이처럼 문제를 감지하는 것이 중요합니다.</p>
+
+<h4 id="가설-검증">가설 검증</h4>
+
+<p>무엇보다도 로그를 제대로 가져와야 가설을 검증할 수 있습니다. 예를 들어, 어떤 페이지에 버튼이 있는데 그 버튼을 얼마나 눌렀는지, 로그(정보)가 없다면 그곳에 버튼을 설치한 것이 좋았는지 정량적인 판단을 할 수가 없습니다.</p>
+
+<h4 id="감사-로그">감사 로그</h4>
+
+<p>보안이라는 관점에서 로그를 생각해 보겠습니다. ‘언제, 누가, 무엇을 했는지’ 정확히 로그로 남겨 두는 것이 중요합니다. 관계형 데이터베이스에서 조작 로그 등이 이에 해당합니다. 이런 로그가 남아 있지 않다면, 문제가 일어났을 때 단서가 없어 곤란합니다.</p>
+
+<h3 id="fluentd-등장-배경">Fluentd 등장 배경</h3>
+
+<p>여러 대에 걸친 로그를 로그 서버와 같은 어딘가 전용 서버에 실시간으로 모을 수 있다면 편리할 것입니다. 이 장에서 소개할 Fluentd 로그 수집 소프트웨어가 이런 용도에 적합합니다.</p>
+
+<h3 id="fluentd와-syslogd의-차이">Fluentd와 syslogd의 차이</h3>
+
+<p>Fluentd와 syslogd의 다른점</p>
+
+<ul>
+  <li>로그 수집 방법과 저장소 등 유연한 사용자화</li>
+  <li>로그에 태그를 붙여 쉽게 관리</li>
+  <li>다양한 언어를 지원하는 모듈 제공</li>
+</ul>
+
+<h3 id="fluentd-사용">Fluentd 사용</h3>
+
+<h4 id="fluentd-도입">Fluentd 도입</h4>
+
+<p>Fluentd는 다음과 같은 방법으로 설치할 수 있습니다.</p>
+
+<ul>
+  <li>소스코드로 Fluentd를 설치한다.</li>
+  <li>Rubygems로 Fluentd를 설치한다.</li>
+  <li>RPM이나 Dev 패키지로 td-agent를 설치한다.</li>
+</ul>
+
+<h4 id="fluentd의-구조">Fluentd의 구조</h4>
+
+<source />
+<p>디렉티브와 <match> 디렉티브가 있습니다.</match></p>
+
+<ul>
+  <li>실제로 몇가지 디렉티브를 이용해서 테스트를 해보겠습니다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo / etc/init.d/td-agent start
+Starting td-agent (via systemctl):	             [ OK ]
+# 또는 
+$ sudo systemctl start td-agent.service
+</code></pre></div></div>
+
+<h4 id="fluentd에-메세지-전송">Fluentd에 메세지 전송</h4>
+
+<p>Fluentd 설정 파일은 /etc/td-agent/td-agent.conf이므로 이 파일을 다음처럼 수정합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;source&gt;
+	type forward
+&lt;/source&gt;
+
+&lt;match debug.test&gt;
+	type stdout
+&lt;/match&gt;
+</code></pre></div></div>
+
+<p>수정을 마쳤으면 반드시 설정 파일을 다시 로드 합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo systemctl reload td-agent
+</code></pre></div></div>
+
+<h4 id="로그-감시">로그 감시</h4>
+
+<h5 id="nginx-설치">Nginx 설치</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Nginx 저장소를 설치합니다
+$ sudo rpm -Uvh \
+http://nginx.org/packages/centos/7/noarch/RPMS/nginx-releasecentos-7-0.el7.ngx.noarch.rpm
+# Nginx를 설치한다 
+$ sudo yum -y install nginx
+</code></pre></div></div>
+
+<p>Nginx를 시작합니다. 자동 시작 설정도 하겠습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># httpd 데몬이 실행 중일 수도 있으니 일단 중지한다
+$systemctl stop httpd.service
+# Nginx 시작 및 자동 시작 설정을 한다 
+$ systemctl start nginx.service
+$ systemctl enable nginx.service
+</code></pre></div></div>
+
+<h4 id="로그를-다른-fluentd-서버로-전송">로그를 다른 Fluentd 서버로 전송</h4>
+
+<p>여러 대의 서버에서 동작하는 좀 더 복잡한 처리를 예로 들어 생각해 봅시다. 어떤 서버에서 Nginx의 액세스 로그를 감시하고 기록된 로그를 Fluentd로 보냅니다. 그리고 out_forward 플러그인을 사용해서 그 로그를 다른 Fluentd에 전송합니다.</p>
+
+<h4 id="호스트-이름-부여">호스트 이름 부여</h4>
+
+<p>호스트에 이름을 붙이려면 fluent-plugin-record-reformer 플러그인을 사용합니다. 이 플러그인은 외부 플러그인이므로 td-agent-gem install 커맨드로 먼저 설치해야 합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /usr/sbin/td-agent-gem install fluent-plugin-record-reformer
+</code></pre></div></div>
+
+<h4 id="mongodb에-저장">MongoDB에 저장</h4>
+
+<p>여기서는 스키마가 없는 도큐먼트 지향 데이터베이스인 MongoDB로 출력해봅니다.</p>
+
+<p>etc/yum.repos.d/mongodb-org-3.0.repo 파일을 다음처럼 작성하여 yum 저장소를 추가합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo yum -y install mongodb-org
+</code></pre></div></div>
+
+<p>설치를 마쳤으면 자동으로 시작되도록 합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service mongod start
+$ sudo chkconfig mongod on 
+</code></pre></div></div>
+
+<ul>
+  <li>액세스 로그를 MongoDB에 저장했는지 알아보는 커맨드 셸 명령어</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mongo fluentd
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; db.nginx_access.find()
+</code></pre></div></div>
+
+<h4 id="fluentd의-권장-구성">Fluentd의 권장 구성</h4>
+
+<p>실제로 Fluentd의 서버 쪽은 active-standby 구성을 권장합니다.</p>
+
+<p>네트워크에 연결하지 않아도 로그 수집을 멈추지 않게 하려는 것입니다. 이때는 다음 처럼 active와 standby를 따로 지정하고 standby 쪽은 <server> 블록 안에서 standby로 설정해야 합니다.</server></p>
+
+<h3 id="로그-시각화">로그 시각화</h3>
+
+<p>로그의 문제점을 쉽게 파악할 수 있다면 로그를 시각화하는 것도 하나의 방법입니다.</p>
+
+<p>예를 들어, 다음 정보를 시각화할 수 있다면 편리하지 않을까요?</p>
+
+<ul>
+  <li>오류 로그(404, 500)추이</li>
+  <li>페이지 응답 속도 추이</li>
+  <li>응답에 일정 시간 이상 걸린 액세스 수의 추이</li>
+  <li>로그인에 실패한 수의 추이</li>
+</ul>
+
+<h3 id="엘라스틱-서치">엘라스틱 서치</h3>
+
+<p>엘라스틱 서치(Elasticsearch)는 엘라스틱이 개발한 오픈 소스 검색엔진으로, 아파치 루씬(Apache Lucene)이라는 전문(Full text) 검색 라이브러리를 기반으로 사용합니다. 스키마를 지정하지 않고 데이터를 등록할 수 있으며, 대량으로 등록된 데이터를 거의 실시간으로 검색할 수 있습니다.</p>
+
+<h4 id="엘라스틱서치-도입">엘라스틱서치 도입</h4>
+
+<h5 id="java-설치">Java 설치</h5>
+
+<p>엘라스틱 서치는 Java로 구현하므로, 우선 Java를 설치합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo yum -y install java-1.7.0-openjdk
+</code></pre></div></div>
+
+<h5 id="엘라스틱서치-설치">엘라스틱서치 설치</h5>
+
+<p>엘라스틱 서치는 yum 커맨드로 간단하게 설치할 수 있습니다.</p>
+
+<p>/etc/yum.repos.d/elasticsearch.repo 파일을 다음 내용으로 새로 만들고, yum 리포지터리를 추가합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo yum -y install elasticsearch
+$ sudo systemctl start elaticsearch.service
+$ sudo systemctl enable elasticsearch.service
+</code></pre></div></div>
+
+<h4 id="엘라스틱서치-사용">엘라스틱서치 사용</h4>
+
+<p>엘라스틱서치는 ‘인덱스’단위로 데이터를 관리합니다. 인덱스는 다음처럼 HTTP 요청으로 쉽게 생성할 수 있습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -X POST http://localhost:9200/test_index
+{"acknowledged":true}
+</code></pre></div></div>
+
+<h4 id="fluentd에서-엘라스틱서치로-데이터-전송">Fluentd에서 엘라스틱서치로 데이터 전송</h4>
+
+<p>엘라스틱서치로 데이터를 보낼 때는 Fluent-plugin-elasticsearch 플러그인을 사용하면 간단합니다. 이 플러그인을 사용하려면 libcurl-devel도 필요하므로 함께 설치합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo yum -y install libcurl-devel
+$ sudo /usr/sbin/td-agent-gem install fluent-plugin-elasticsearch
+</code></pre></div></div>
+
+<p>서버쪽 Fluentd 설정을 다음처럼 변경합니다. 여기서는 out_copy 플러그인을 사용하여 앞에서처럼 MongoDB에 로그를 출력하면서 동시에 엘라스틱서치에도 로그를 보냅니다. out_copy는 출력을 복수의 스토리지에 복사해서 전달할 수 있는 편리한 플러그인입니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;source&gt;
+	type forward
+&lt;/source&gt;
+
+&lt;match hostname.nginx.access_log&gt;
+	type copy
+	
+	&lt;store&gt;
+		type mongo
+		host localhost
+		port 27017
+		database fluentd
+		collection nginx_access
+		flush_interval 10s
+	&lt;/store&gt;
+	
+	&lt;store&gt;
+		type elasticsearch
+		host localhost
+		port 9200
+		logtash_format true
+		logstash_prefix test_index
+		logstash_dataformat %Y%m
+		type_name nginx_access
+		buffer_type memory
+		buffer_chunk_limit 10m
+		buffer_queue_limit 10
+		flush_interval 1s
+		retry_limit 16
+		retry_wait 1s
+	&lt;/store&gt;
+&lt;/match&gt;
+</code></pre></div></div>
+
+<h4 id="인덱스-삭제">인덱스 삭제</h4>
+
+<p>오래된 인덱스를 삭제할 때는 엘라스틱서치에서 제공하는 Curator 도구를 사용하면 편리합니다. ‘pip’라는 Python의 패키지 관리 도구를 사용해서 설치하겠습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo pip install elasticsearch-curator
+$ sudo pip install argparse
+</code></pre></div></div>
+
+<p>Curator에는 여러 옵션이 있지만, 최근 며칠분의 인덱스만 남기고 오래된 인덱스를 삭제하는 사용법으로도 충분합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curator --host localhost delete --older-than 30 
+</code></pre></div></div>
+
+<h3 id="키바나">키바나</h3>
+
+<p>카바나는 엘라스틱서치 안의 데이터를 시각화하고자 엘라스틱서치사에서 제공하는 공식 데이터 시각화 도구입니다. HTML, CSS, JS로만 구성하기 때문에 웹 서버만 준비하면 사용할 수 있습니다.</p>
+
+<h4 id="카바나-도입">카바나 도입</h4>
+
+<p>적당한 디렉터리에 키바나를 설치하고 Nginx의 도큐먼트 루트에 설정합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -O https://download.elastic.co/kibana/kibana/kibana-3.1.0.tar.gz
+$ tar zxvf kibana-3.1.0.tar.gz
+$ mv kibana-3.1.0 /usr/local/
+$ vi /etc/nginx/conf.d/default.conf
+</code></pre></div></div>
+
+<h5 id="더미-액세스-로그-생성">더미 액세스 로그 생성</h5>
+
+<p>우선 apache-loggen을 설치합니다. Ruby 라이브러리 관리; 도구인 Rubygems를 사용할 것이므로 환경을 설정합니다. 이미 앞에서 환경을 설정했다면 건너뜁니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bash_profile
+$ echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bash_profile
+$ source ~/.bash_profile
+$ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+$ sudo yum -y install gcc make openssl-devel 
+$ rbenv install 2.2.3
+$ rbenv global 2.2.3
+</code></pre></div></div>
+
+<p>이제 Rubygems를 사용할 수 있으니 apache-loggen을 설치합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install apache-loggen
+</code></pre></div></div>
+
+<h4 id="키바나-사용">키바나 사용</h4>
+
+<p>로그를 여러 가지 관점에서 분석하고 싶을 때 간편하게 시각화할 수 있는 것이 키바나의 장점입니다.</p>
+
+<p>키바나에서는 다양한 그래프를 자유롭게 생성하고 배치할 수 있지만, 주로 다음 네 가지를 사용합니다.</p>
+
+<ul>
+  <li>히스토그램</li>
+  <li>테이블</li>
+  <li>텀</li>
+  <li>트렌드</li>
+</ul>
+
+<h5 id="히스토그램">히스토그램</h5>
+
+<p>히스토그램에서는 시계열로 데이터를 표시하거나 특정 쿼리로 필터링할 수 있습니다.</p>
+
+<h5 id="테이블">테이블</h5>
+
+<p>테이블에서는 액세스 로그를 테이블 형식으로 표시합니다. 표시할 요소를 필터링 할 수도 있어 적절히 필터링 하면 보기가 편해집니다.</p>
+
+<h5 id="텀">텀</h5>
+
+<p>텀은 이른바 패싯 검색 결과를 표시하는 것입니다. 예를 들어, 아파치의 액세스 로그에서 Field로 Code(스테이터스 코드)를 지정하면, 각 스테이터스 코드가 몇 번씩 발생했는지 표시합니다.</p>
+
+<h5 id="트렌드">트렌드</h5>
+
+<p>트렌드는 10분 전이나 1시간 전과 비교해서 값이 어느 정도 변했는지 알려줍니다.</p>
+</section>
+  
+<footer>
+  <div class="tags">
+    
+    <a class="tag" href="/blackruby-code/tags#Web">#Web</a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+
+      <!-- </div>      -->
+    </div>
+    
+<script src="/blackruby-code/assets/js/katex_init.js"></script>
+
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

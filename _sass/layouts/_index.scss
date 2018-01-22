@@ -15,8 +15,9 @@
   @extend %padding-regular;
   display: inline-block;
   width: 100%;
-  background-color:$header-desc-background-color;
   background-size: cover;
+  background-position: center;
+  height: 250px;
   font-size: 1.2em;
   text-align: center;
   color: $header-desc-text-color;
@@ -32,7 +33,7 @@
   .post-teaser {    
     width: 100%;
     margin-bottom: 0;
-    padding: 5% 0;
+    padding: 5% 20%;
     display: inline-block;
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;

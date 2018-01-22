@@ -12,7 +12,7 @@ layout: page
             <p>{{ year }}</p>
           {% endunless %}
           <article>
-            <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
             <time>
               <span class="month">{{ post.date | date: "%b" }}</span>
               <span class="day">{{ post.date | date: "%d" }}</span>

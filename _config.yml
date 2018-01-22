@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/blackruby-code"
+baseurl: ""
 url: "http://blackrubycode.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
@@ -13,7 +13,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-        <p>블랙루비스튜디오 코딩코딩</p>        
+      
   header_text_feature_image:
   footer_text: >
         Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
