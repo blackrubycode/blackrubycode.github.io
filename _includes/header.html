@@ -50,7 +50,46 @@
 				</form>
 				</li>
 				{% endif %}
-			</ul>
+			</ul>			
+		</nav>
+		<nav class="mobile">
+			<i class="fa fa-bars" aria-hidden="true"></i>	
+			<ul>
+				<li>
+					<a href="https://blackruby.studio/">About</a>
+				</li>
+				<li class="dev-tab">
+					<a href="#">Dev</a>
+					<ul>
+						<li>
+							<a href="{{ site.baseurl }}/back.html">back</a>
+						</li>
+						<li>
+							<a href="{{ site.baseurl }}/front.html">front</a>							
+						</li>
+					</ul>
+				</li>
+				{% for page in site.pages %}
+				{% if page.title and page.hide != true %}
+				<li>
+					<a class="page-link" href="{{ page.url | relative_url }}">
+						{{ page.title }}
+					</a>
+				</li>
+				{% endif %}
+				{% endfor %}			            
+				<!-- Search bar -->
+				{% if site.theme_settings.search %}
+				<li class="search-bar">
+				<form action="{{ site.baseurl }}/search.html" method="get">
+					<input type="text" id="search-box" name="query" placeholder="Search" class="">
+					<button type="submit" class="">
+						<i class="fa fa-fw fa-search"></i>
+					</button>
+				</form>
+				</li>
+				{% endif %}
+			</ul>	
 		</nav>
 	</div>	    
 </header>

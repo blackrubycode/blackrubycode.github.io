@@ -88,7 +88,9 @@
         }
       }
     }
-    
+    @media (max-width: 675px) {
+      display: none;
+    }
     @media (max-width: 1100px) {
       ul {
         display: inline-block;
@@ -96,9 +98,82 @@
         text-align: left;
         width: 100%;
       }
-    }
+    }    
   }
-
+  .mobile {    
+    display: none;   
+    float: right;      
+    @media (max-width: 675px) {
+      display: inline-block;
+    }
+    .fa-bars {
+      padding: 0 10px 0 10px;
+      line-height: 80px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    > ul {
+      width: 100vw;
+      background-color: #fff;
+      border-bottom:1px solid #999;
+      position: absolute;
+      max-height:0;
+      top: 78px;
+      right: 0;
+      opacity: 0.8;
+      box-sizing: border-box;
+      overflow: hidden;
+      transition: all 1s ease;
+      &.on {
+        max-height: 600px;
+        opacity: 1;
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0;   
+      li {
+        padding: 15px 20px;        
+        margin: 0;
+        cursor: pointer;
+        &:hover {
+          background-color: antiquewhite;
+        }
+        &.search-bar {
+          &:hover {
+            background-color: #fff;
+          }
+        }
+        &.dev-tab {
+          li {
+            a {
+              position: relative;  
+              &:after {
+                content: ' ';
+                display: none;
+                width: 0px;
+                border-bottom: 1px solid black;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: all 0.3s ease;
+              }         
+              &:hover {
+                &:after {                 
+                  display: block;
+                  width: 45px;                 
+                }
+              }              
+            }
+          }          
+        }
+        a {
+          display: inline-block;
+          width: 100%;
+        }
+      }           
+    }    
+  }
     /* --- Search form --- */
     .search-bar {
       margin-left: 30px;
