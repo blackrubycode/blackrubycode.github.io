@@ -24,6 +24,11 @@ article {
   .footnotes {
     font-size: 0.9em;
   }
+  .post-content {
+    p {
+      display: inline-block;
+    }
+  }
 }
 
 header {

@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blackruby Code</title>
-    <atom:link href="/blackruby-code/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>http://localhost:4000/blackruby-code/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>http://localhost:4000/</link>
     <description>A website with blog posts and pages</description>
-    <pubDate>Mon, 22 Jan 2018 17:50:24 +0900</pubDate>
+    <pubDate>Tue, 23 Jan 2018 14:18:26 +0900</pubDate>
     
       <item>
         <title>재미그래밍 - 스터디자료</title>
-        <link>/blackruby-code/python/2018/01/15/study.html</link>
-        <guid isPermaLink="true">/blackruby-code/python/2018/01/15/study.html</guid>
+        <link>/python/2018/01/15/study.html</link>
+        <guid isPermaLink="true">/python/2018/01/15/study.html</guid>
         <description>&lt;h1 id=&quot;스터디-자료-2018_01_15&quot;&gt;스터디 자료 2018_01_15&lt;/h1&gt;
 
 &lt;h2 id=&quot;restful-파이썬-웹-서비스-제작&quot;&gt;RESTful 파이썬 웹 서비스 제작&lt;/h2&gt;
@@ -477,8 +477,8 @@ if __name__ == '__main__':
     
       <item>
         <title>fungramming - 환경구축 자동화와 서버구축</title>
-        <link>/blackruby-code/web/2018/01/06/fungramming.html</link>
-        <guid isPermaLink="true">/blackruby-code/web/2018/01/06/fungramming.html</guid>
+        <link>/web/2018/01/06/fungramming.html</link>
+        <guid isPermaLink="true">/web/2018/01/06/fungramming.html</guid>
         <description>&lt;h1 id=&quot;재미그래밍-스터디-자료&quot;&gt;재미그래밍 스터디 자료&lt;/h1&gt;
 
 &lt;h2 id=&quot;웹-환경-구축-자동화&quot;&gt;웹 환경 구축 자동화&lt;/h2&gt;
@@ -938,8 +938,8 @@ Backend-service 에 대해 max fails, fail timeout시 백업 서버로 진입할
     
       <item>
         <title>List와 array의 차이점</title>
-        <link>/blackruby-code/code/2018/01/03/List&Array.html</link>
-        <guid isPermaLink="true">/blackruby-code/code/2018/01/03/List&Array.html</guid>
+        <link>/code/2018/01/03/List&Array.html</link>
+        <guid isPermaLink="true">/code/2018/01/03/List&Array.html</guid>
         <description>&lt;h1 id=&quot;list와-array의-차이점&quot;&gt;List와 Array의 차이점&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -964,8 +964,8 @@ Backend-service 에 대해 max fails, fail timeout시 백업 서버로 진입할
     
       <item>
         <title>RESTful 파이썬 웹 제작</title>
-        <link>/blackruby-code/python/2017/12/31/PythonAPI.html</link>
-        <guid isPermaLink="true">/blackruby-code/python/2017/12/31/PythonAPI.html</guid>
+        <link>/python/2017/12/31/PythonAPI.html</link>
+        <guid isPermaLink="true">/python/2017/12/31/PythonAPI.html</guid>
         <description>&lt;h1 id=&quot;restful-파이썬-웹-서비스-제작&quot;&gt;RESTful 파이썬 웹 서비스 제작&lt;/h1&gt;
 
 &lt;h2 id=&quot;장고를-이용한-레스트풀-api의-개발&quot;&gt;장고를 이용한 레스트풀 API의 개발&lt;/h2&gt;
@@ -1207,8 +1207,8 @@ Class Game(models.Model):
     
       <item>
         <title>웹 엔지니어 - 환경구축의 자동화</title>
-        <link>/blackruby-code/web/2017/12/25/Web7.html</link>
-        <guid isPermaLink="true">/blackruby-code/web/2017/12/25/Web7.html</guid>
+        <link>/web/2017/12/25/Web7.html</link>
+        <guid isPermaLink="true">/web/2017/12/25/Web7.html</guid>
         <description>&lt;h2 id=&quot;환경-구축-자동화&quot;&gt;환경 구축 자동화&lt;/h2&gt;
 
 &lt;h3 id=&quot;수동-환경-구축의-위험성&quot;&gt;수동 환경 구축의 위험성&lt;/h3&gt;
@@ -1950,8 +1950,8 @@ RUN git clone &amp;lt;임으의 리포지터리&amp;gt;
     
       <item>
         <title>웹 엔지니어 - 데이터 시각화</title>
-        <link>/blackruby-code/web/2017/12/25/Web6.html</link>
-        <guid isPermaLink="true">/blackruby-code/web/2017/12/25/Web6.html</guid>
+        <link>/web/2017/12/25/Web6.html</link>
+        <guid isPermaLink="true">/web/2017/12/25/Web6.html</guid>
         <description>&lt;h2 id=&quot;데이터-시각화&quot;&gt;데이터 시각화&lt;/h2&gt;
 
 &lt;h3 id=&quot;왜-구글-차트인가&quot;&gt;왜 구글 차트인가&lt;/h3&gt;
@@ -2284,8 +2284,8 @@ chart.draw(data, google.charts.Bar.convertOptions(options));
     
       <item>
         <title>웹 엔지니어 - 로그</title>
-        <link>/blackruby-code/web/2017/12/24/Web5.html</link>
-        <guid isPermaLink="true">/blackruby-code/web/2017/12/24/Web5.html</guid>
+        <link>/web/2017/12/24/Web5.html</link>
+        <guid isPermaLink="true">/web/2017/12/24/Web5.html</guid>
         <description>&lt;h2 id=&quot;로그&quot;&gt;로그&lt;/h2&gt;
 
 &lt;h3 id=&quot;로그는-왜-중요한가&quot;&gt;로그는 왜 중요한가&lt;/h3&gt;
@@ -2613,8 +2613,8 @@ $ rbenv global 2.2.3
     
       <item>
         <title>웹 엔지니어 - 프론트엔드의 구현</title>
-        <link>/blackruby-code/front/2017/12/24/Web4.html</link>
-        <guid isPermaLink="true">/blackruby-code/front/2017/12/24/Web4.html</guid>
+        <link>/front/2017/12/24/Web4.html</link>
+        <guid isPermaLink="true">/front/2017/12/24/Web4.html</guid>
         <description>&lt;h2 id=&quot;프런트-엔드-구현&quot;&gt;프런트 엔드 구현&lt;/h2&gt;
 
 &lt;h3 id=&quot;프런트-엔드-개발&quot;&gt;프런트 엔드 개발&lt;/h3&gt;
@@ -3604,8 +3604,8 @@ app.run(function() {
     
       <item>
         <title>웹 엔지니어 - 데이터베이스</title>
-        <link>/blackruby-code/web/2017/12/24/Web3.html</link>
-        <guid isPermaLink="true">/blackruby-code/web/2017/12/24/Web3.html</guid>
+        <link>/web/2017/12/24/Web3.html</link>
+        <guid isPermaLink="true">/web/2017/12/24/Web3.html</guid>
         <description>&lt;h3 id=&quot;nosql-데이터베이스와-관계형-데이터베이스의-차이&quot;&gt;NoSQL 데이터베이스와 관계형 데이터베이스의 차이&lt;/h3&gt;
 
 &lt;h4 id=&quot;관계형-데이터베이스의-특징&quot;&gt;관계형 데이터베이스의 특징&lt;/h4&gt;
@@ -3945,8 +3945,8 @@ logs.insert_many([
     
       <item>
         <title>웹 엔지니어 - PHP</title>
-        <link>/blackruby-code/web/2017/12/24/Web2.html</link>
-        <guid isPermaLink="true">/blackruby-code/web/2017/12/24/Web2.html</guid>
+        <link>/web/2017/12/24/Web2.html</link>
+        <guid isPermaLink="true">/web/2017/12/24/Web2.html</guid>
         <description>&lt;h2 id=&quot;php&quot;&gt;PHP&lt;/h2&gt;
 
 &lt;h3 id=&quot;최근-php&quot;&gt;최근 PHP&lt;/h3&gt;
@@ -4321,8 +4321,8 @@ $ psysh vendor/autoload.php
     
       <item>
         <title>웹 엔지니어 - Ruby on Rails</title>
-        <link>/blackruby-code/web/2017/12/23/Web1.html</link>
-        <guid isPermaLink="true">/blackruby-code/web/2017/12/23/Web1.html</guid>
+        <link>/web/2017/12/23/Web1.html</link>
+        <guid isPermaLink="true">/web/2017/12/23/Web1.html</guid>
         <description>&lt;h2 id=&quot;ruby-on-rails로-개발&quot;&gt;Ruby on Rails로 개발&lt;/h2&gt;
 
 &lt;h3 id=&quot;ruby의-개요&quot;&gt;Ruby의 개요&lt;/h3&gt;
@@ -4820,8 +4820,8 @@ String.stub(:test).and_return('test')
     
       <item>
         <title>웹 엔지니어 - 웹 엔지니어</title>
-        <link>/blackruby-code/web/2017/12/20/Web.html</link>
-        <guid isPermaLink="true">/blackruby-code/web/2017/12/20/Web.html</guid>
+        <link>/web/2017/12/20/Web.html</link>
+        <guid isPermaLink="true">/web/2017/12/20/Web.html</guid>
         <description>&lt;h1 id=&quot;웹-엔지니어의-교과서&quot;&gt;웹 엔지니어의 교과서&lt;/h1&gt;
 
 &lt;h2 id=&quot;웹-엔지니어&quot;&gt;웹 엔지니어&lt;/h2&gt;
@@ -5003,8 +5003,8 @@ String.stub(:test).and_return('test')
     
       <item>
         <title>문제풀이 - 코딩도장</title>
-        <link>/blackruby-code/code/2017/12/20/Code.html</link>
-        <guid isPermaLink="true">/blackruby-code/code/2017/12/20/Code.html</guid>
+        <link>/code/2017/12/20/Code.html</link>
+        <guid isPermaLink="true">/code/2017/12/20/Code.html</guid>
         <description>&lt;p&gt;1차원의 점들이 주어졌을 때, 그 중 가장 거리가 짧은 것의 쌍을 출력하는 함수를 작성하시오. (단 점들의 배열은 모두 정렬되어있다고 가정한다.)&lt;/p&gt;
 
 &lt;p&gt;예를들어 S={1, 3, 4, 8, 13, 17, 20} 이 주어졌다면, 결과값은 (3, 4)가 될 것이다.&lt;/p&gt;
@@ -5032,8 +5032,8 @@ print(s[result[0]], s[result[1]])
     
       <item>
         <title>블록체인기술의 개념(O'reilly-blockchain)</title>
-        <link>/blackruby-code/blockchain/2017/12/19/Blockchain.html</link>
-        <guid isPermaLink="true">/blackruby-code/blockchain/2017/12/19/Blockchain.html</guid>
+        <link>/blockchain/2017/12/19/Blockchain.html</link>
+        <guid isPermaLink="true">/blockchain/2017/12/19/Blockchain.html</guid>
         <description>&lt;p&gt;&lt;strong&gt;[원문]&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;we-may-be-at-the-dawn-of-a-new-revolution&quot;&gt;We may be at the dawn of a new revolution.&lt;/h1&gt;
 
@@ -5249,8 +5249,8 @@ Paradigm 5 기능은 지불에 대한 블록 체인 기술 오버레이 (기본 
     
       <item>
         <title>파이썬을 여행하는 히치하이커를 위한 안내서 - 데이터 지속성</title>
-        <link>/blackruby-code/back/2017/12/17/Python_travel7.html</link>
-        <guid isPermaLink="true">/blackruby-code/back/2017/12/17/Python_travel7.html</guid>
+        <link>/back/2017/12/17/Python_travel7.html</link>
+        <guid isPermaLink="true">/back/2017/12/17/Python_travel7.html</guid>
         <description>&lt;h2 id=&quot;데이터-지속성&quot;&gt;데이터 지속성&lt;/h2&gt;
 
 &lt;h3 id=&quot;구조화된-파일&quot;&gt;구조화된 파일&lt;/h3&gt;
